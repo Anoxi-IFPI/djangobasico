@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+
+{% block titulo%} Página de Produtos {% endblock %}
+
+{% block lateral %}
+  <h2>Categorias</h2>
+        <ul>
+            <li>Ofertas do dia</li>
+            <li>Celulares</li>
+            <li>Móveis</li>
+            <li>Eletrodoméstico</li>
+            <li>TV e Vídeo</li>
+        </ul>
+{% endblock %}
+
+{% block conteudo %}
+    <h1>Lista de produtos (geral)</h1>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Descrição</th>
+                        <th>Preço</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Mesa de Jantar</td>
+                        <td>R$ 3.200</td>
+                    </tr>
+                    <tr>
+                        <td>Iphone</td>
+                        <td>R$ 1.200</td>
+                    </tr>
+                </tbody>
+            </table>
+{%endblock%}
+
+
+ 
+
+
+{% comment %} <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Página de Produtos</title>
+</head> <body>
+    
+    <h1> Minha lista de Produtos </h1>
+    <p>Nome: {{ nome }}</p>
+    <p>Último acesso: {{ ultimo_acesso }}</p>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Preço</th>
+            </tr>
+        </thead>
+        <tbody> 
+            {% for produto in produtos %}
+            <tr>
+                <td>{{ produto.nome }}</td>
+                <td>{{ produto.preco }}</td> </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <p>Total Items: {{ produtos|length }}</p>
+    {% if idade < 12 %}
+        <p>Este produto é para maiores de 12 anos.</p>
+    {% elif idade >= 12 and idade <= 18 %}
+        <p>Este produto é para Aborrecentes.</p>
+    {% else %}
+        <p>Adultos</p>
+    {% endif %}
+
+</body>
+</html> {% endcomment %}

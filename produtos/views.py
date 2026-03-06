@@ -27,8 +27,11 @@ def index(request):
             {'nome': 'Samsung Galaxy', 'preco': 'R$ 3.000,00'},
         ]
     }
-    return render(request, 'index.html', context)
+    return render(request, 'produtos/index.html', context)
 
 def celulares(request):
-    return render(request,'celulares.html')
+    return render(request,'celulares/celulares.html')
+
+def moveis(request):
+    return render(request,'moveis/exemplos_dtl.html')
 
